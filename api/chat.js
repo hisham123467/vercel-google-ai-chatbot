@@ -4,7 +4,7 @@ export default async function handler(req,res){
     const {messages}=req.body||{};
     if(!Array.isArray(messages)||messages.length===0) return res.status(400).json({error:"Messages are required"});
 
-    const API_KEY=process.env.GEMINI_API_KEY;
+   const API_KEY = "YOUR_TEST_API_KEY";
     const MODEL=process.env.GEMINI_MODEL||"gemini-2.0-flash";
 
     if(!API_KEY) return res.status(500).json({error:"GEMINI_API_KEY is missing in Vercel Environment Variables."});
