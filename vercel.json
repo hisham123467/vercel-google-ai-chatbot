@@ -1,1 +1,53 @@
-{"functions":{"api/chat.js":{"maxDuration":10}}}
+{
+  "functions": {
+    "api/chat.js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/email-agent",
+      "destination": "https://email-ai-agent-amber.vercel.app"
+    },
+    {
+      "source": "/email-agent/:path*",
+      "destination": "https://email-ai-agent-amber.vercel.app/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://email-ai-agent-amber.vercel.app/_next/:path*"
+    },
+    {
+      "source": "/api/agent",
+      "destination": "https://email-ai-agent-amber.vercel.app/api/agent"
+    },
+    {
+      "source": "/api/google/:path*",
+      "destination": "https://email-ai-agent-amber.vercel.app/api/google/:path*"
+    },
+    {
+      "source": "/api/admin/:path*",
+      "destination": "https://email-ai-agent-amber.vercel.app/api/admin/:path*"
+    },
+    {
+      "source": "/admin/setup",
+      "destination": "https://email-ai-agent-amber.vercel.app/admin/setup"
+    },
+    {
+      "source": "/manifest.webmanifest",
+      "destination": "https://email-ai-agent-amber.vercel.app/manifest.webmanifest"
+    },
+    {
+      "source": "/sw.js",
+      "destination": "https://email-ai-agent-amber.vercel.app/sw.js"
+    },
+    {
+      "source": "/icon.svg",
+      "destination": "https://email-ai-agent-amber.vercel.app/icon.svg"
+    },
+    {
+      "source": "/maskable-icon.svg",
+      "destination": "https://email-ai-agent-amber.vercel.app/maskable-icon.svg"
+    }
+  ]
+}
