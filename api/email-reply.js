@@ -15,7 +15,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Messages are required' });
   }
 
-  const token = process.env.VERCEL_OIDC_TOKEN || '';
+  const token = process.env.VERCEL_OIDC_TOKEN || req.headers['x-vercel-oidc-token'] || '';
   if (!token) {
     return res.status(500).json({ error: 'Vercel OIDC token unavailable' });
   }
